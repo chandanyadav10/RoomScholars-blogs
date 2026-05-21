@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
 const ADMIN_TEXT = {
   en: {
@@ -134,7 +135,7 @@ const SAMPLE_BLOGS = [
   },
 ];
 
-export default function AdminPage() {
+ function AdminDashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -480,5 +481,23 @@ export default function AdminPage() {
         )}
       </div>
     </div>
+  );
+}
+
+// ─── Spinner shown during Suspense boundary ──────────────────────────────────
+function LoadingSpinner() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-navy border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+}
+
+// ─── Default export wraps AdminDashboard in Suspense ─────────────────────────
+export default function AdminPage() {
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <AdminDashboard />
+    </Suspense>
   );
 }
