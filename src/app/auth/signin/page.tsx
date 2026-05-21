@@ -39,23 +39,23 @@ function SignInForm() {
   }
 
   return (
-    <div className="min-h-screen bg-[#07122B] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-navy flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#F5A623] rounded-xl flex items-center justify-center">
-              <span className="text-[#07122B] font-bold">RS</span>
+            <div className="w-10 h-10 bg-amber rounded-xl flex items-center justify-center">
+              <span className="text-navy font-bold">RS</span>
             </div>
             <span className="text-white text-2xl font-bold" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
-              Room<span className="text-[#F5A623]">Scholars</span>
+              Room<span className="text-amber">Scholars</span>
             </span>
           </Link>
           <p className="mt-3 text-gray-400 text-sm">Admin Dashboard Login</p>
         </div>
 
         <div className="bg-white rounded-3xl p-8 shadow-2xl">
-          <h1 className="text-2xl font-bold text-[#07122B] mb-6" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
+          <h1 className="text-2xl font-bold text-navy mb-6" style={{ fontFamily: "Playfair Display, Georgia, serif" }}>
             Sign In
           </h1>
 
@@ -73,7 +73,7 @@ function SignInForm() {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#07122B]"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                 placeholder="admin@roomscholars.com"
               />
             </div>
@@ -84,7 +84,7 @@ function SignInForm() {
                 required
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#07122B]"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                 placeholder="••••••••"
               />
             </div>
@@ -92,7 +92,7 @@ function SignInForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#07122B] text-white py-3.5 rounded-xl font-bold hover:bg-[#0d1f4a] disabled:opacity-50 transition text-sm"
+              className="w-full bg-navy text-white py-3.5 rounded-xl font-bold hover:bg-navy-light disabled:opacity-50 transition text-sm"
             >
               {loading ? "Signing in..." : "Sign In"}
             </button>
