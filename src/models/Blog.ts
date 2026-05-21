@@ -32,7 +32,6 @@ const BlogSchema = new Schema<IBlog>(
 );
 
 // Index for faster queries
-BlogSchema.index({ slug: 1 });
 BlogSchema.index({ language: 1, status: 1, createdAt: -1 });
 
 export const Blog: Model<IBlog> =
