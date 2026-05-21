@@ -71,7 +71,7 @@ updatedAt   Date (auto)
 
 ```bash
 git clone <repo-url>
-cd rs-blog
+cd RoomScholars-blogs
 npm install
 ```
 
@@ -179,5 +179,7 @@ src/
 │   └── AuthProvider.tsx           # SessionProvider wrapper
 ├── lib/mongodb.ts
 ├── models/Blog.ts                 # Full Mongoose schema
-└── services/blog.service.ts
+├── services/blog.service.ts
+└── proxy.ts
+
 ```
