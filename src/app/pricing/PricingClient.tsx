@@ -249,9 +249,9 @@ export default function PricingClient({ lang }: Props) {
   return (
     <div>
       {/* Header */}
-      <div className="bg-[#07122B] py-16">
+      <div className="bg-navy py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-[#F5A623] text-sm font-semibold uppercase tracking-wider mb-3">
+          <p className="text-amber text-sm font-semibold uppercase tracking-wider mb-3">
             {t.badge}
           </p>
           <h1
@@ -273,13 +273,13 @@ export default function PricingClient({ lang }: Props) {
               key={plan.name}
               className={`rounded-3xl p-8 flex flex-col relative ${
                 plan.highlighted
-                  ? "bg-[#07122B] text-white shadow-2xl shadow-[#07122B]/30 ring-2 ring-[#F5A623]"
+                  ? "bg-navy text-white shadow-2xl shadow-navy/30 ring-2 ring-amber"
                   : "bg-white text-gray-800 border border-gray-200 shadow-sm"
               }`}
             >
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#F5A623] text-[#07122B] text-xs font-bold px-4 py-1.5 rounded-full shadow">
+                  <span className="bg-amber text-navy text-xs font-bold px-4 py-1.5 rounded-full shadow">
                     {plan.badge}
                   </span>
                 </div>
@@ -302,7 +302,7 @@ export default function PricingClient({ lang }: Props) {
               <ul className="space-y-3 mb-10 flex-1">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-sm">
-                    <span className={`mt-0.5 text-base ${plan.highlighted ? "text-[#F5A623]" : "text-[#07122B]"}`}>✓</span>
+                    <span className={`mt-0.5 text-base ${plan.highlighted ? "text-amber" : "text-navy"}`}>✓</span>
                     <span className={plan.highlighted ? "text-gray-200" : "text-gray-600"}>{f}</span>
                   </li>
                 ))}
@@ -313,8 +313,8 @@ export default function PricingClient({ lang }: Props) {
                   href={plan.href}
                   className={`w-full text-center py-3.5 rounded-xl font-bold transition ${
                     plan.highlighted
-                      ? "bg-[#F5A623] hover:bg-[#d4891a] text-[#07122B]"
-                      : "bg-gray-100 hover:bg-gray-200 text-[#07122B]"
+                      ? "bg-amber hover:bg-amber-dark text-navy"
+                      : "bg-gray-100 hover:bg-gray-200 text-navy"
                   }`}
                 >
                   {plan.cta}
@@ -324,8 +324,8 @@ export default function PricingClient({ lang }: Props) {
                   onClick={() => handlePayment(plan.amount, plan.name)}
                   className={`w-full py-3.5 rounded-xl font-bold transition cursor-pointer ${
                     plan.highlighted
-                      ? "bg-[#F5A623] hover:bg-[#d4891a] text-[#07122B]"
-                      : "bg-[#07122B] hover:bg-[#0d1f4a] text-white"
+                      ? "bg-amber hover:bg-amber-dark text-navy"
+                      : "bg-navy hover:bg-navy-light text-white"
                   }`}
                 >
                   {plan.cta}
@@ -354,7 +354,7 @@ export default function PricingClient({ lang }: Props) {
         {/* FAQ */}
         <div className="mt-20">
           <h2
-            className="text-3xl font-bold text-[#07122B] text-center mb-10"
+            className="text-3xl font-bold text-navy text-center mb-10"
             style={{ fontFamily: "Playfair Display, Georgia, serif" }}
           >
             {t.faqTitle}
@@ -362,7 +362,7 @@ export default function PricingClient({ lang }: Props) {
           <div className="grid md:grid-cols-2 gap-6">
             {t.faqs.map((item) => (
               <div key={item.q} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <h3 className="font-semibold text-[#07122B] mb-2">{item.q}</h3>
+                <h3 className="font-semibold text-navy mb-2">{item.q}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}

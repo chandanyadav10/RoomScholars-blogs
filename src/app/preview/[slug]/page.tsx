@@ -21,14 +21,14 @@ export default async function PreviewBlogPage({
   return (
     <div className="min-h-screen bg-amber-50">
       {/* Preview Banner */}
-      <div className="bg-[#F5A623] text-[#07122B] text-center py-3 font-bold text-sm flex items-center justify-center gap-3">
+      <div className="bg-amber text-navy text-center py-3 font-bold text-sm flex items-center justify-center gap-3">
         <span>👁 Preview Mode</span>
         <span className="font-normal">— This blog may not be published yet</span>
         <Link href={`/admin`} className="underline font-bold ml-2">Go to Admin</Link>
       </div>
 
       {/* Header */}
-      <div className="bg-[#07122B]/95 py-12">
+      <div className="bg-navy/95 py-12">
         <div className="max-w-3xl mx-auto px-4">
           <h1
             className="text-4xl font-bold text-white leading-tight"
@@ -63,7 +63,7 @@ export default async function PreviewBlogPage({
           </div>
         )}
         <div className="mt-12 pt-6 border-t">
-          <Link href="/admin" className="text-[#07122B] font-semibold hover:text-[#F5A623] transition">
+          <Link href="/admin" className="text-navy font-semibold hover:text-amber transition">
             ← Back to Admin
           </Link>
         </div>

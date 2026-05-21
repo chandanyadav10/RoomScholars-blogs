@@ -1,7 +1,7 @@
 export default function BlogsLoading() {
   return (
     <div>
-      <div className="bg-[#07122B] py-14">
+      <div className="bg-navy py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="h-3 w-32 bg-white/10 rounded mb-3 skeleton" />
           <div className="h-10 w-64 bg-white/10 rounded skeleton" />

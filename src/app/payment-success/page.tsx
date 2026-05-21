@@ -58,7 +58,7 @@ export default async function PaymentSuccessPage({
         </div>
 
         <h1
-          className="text-3xl font-bold text-[#07122B]"
+          className="text-3xl font-bold text-navy"
           style={{ fontFamily: "Playfair Display, Georgia, serif" }}
         >
           {t.title}
@@ -75,7 +75,7 @@ export default async function PaymentSuccessPage({
         <div className="mt-8 flex flex-col gap-3">
           <Link
             href={`/blogs?lang=${language}`}
-            className="bg-[#07122B] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#0d1f4a] transition"
+            className="bg-navy text-white px-8 py-3 rounded-xl font-semibold hover:bg-navy-light transition"
           >
             {t.explore}
           </Link>

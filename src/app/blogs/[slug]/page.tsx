@@ -61,14 +61,14 @@ export default async function SingleBlogPage({ params }: Props) {
   return (
     <article>
       {/* Hero header */}
-      <div className="bg-[#07122B] py-14">
+      <div className="bg-navy py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6 flex-wrap">
             <Link href={`/blogs?lang=${blog.language}`} className="text-gray-400 hover:text-white transition text-sm">
               {backLabel}
             </Link>
             <span className="text-gray-600">/</span>
-            <span className="bg-[#F5A623] text-[#07122B] text-xs font-bold px-2.5 py-1 rounded-lg">
+            <span className="bg-amber text-navy text-xs font-bold px-2.5 py-1 rounded-lg">
               {blog.language === "zh" ? "中文" : "English"}
             </span>
             {blog.status === "draft" && (
@@ -87,8 +87,8 @@ export default async function SingleBlogPage({ params }: Props) {
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#F5A623] flex items-center justify-center">
-                <span className="text-[#07122B] font-bold text-xs">RS</span>
+              <div className="w-7 h-7 rounded-full bg-amber flex items-center justify-center">
+                <span className="text-navy font-bold text-xs">RS</span>
               </div>
               <span>{blog.author || "RoomScholars Team"}</span>
             </div>
@@ -137,14 +137,14 @@ export default async function SingleBlogPage({ params }: Props) {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <Link href={`/blogs?lang=${blog.language}`}
-            className="inline-flex items-center gap-2 text-[#07122B] font-semibold hover:text-[#F5A623] transition-colors">
+            className="inline-flex items-center gap-2 text-navy font-semibold hover:text-amber transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             {backLabel}
           </Link>
           <Link href="/pricing"
-            className="bg-[#07122B] text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:bg-[#0d1f4a] transition">
+            className="bg-navy text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:bg-navy-light transition">
             {premiumLabel}
           </Link>
         </div>

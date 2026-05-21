@@ -35,8 +35,8 @@ function ToolbarButton({
       title={title}
       className={`px-2 py-1.5 rounded-lg text-sm font-medium transition-all ${
         active
-          ? "bg-[#07122B] text-white"
-          : "text-gray-600 hover:bg-gray-100 hover:text-[#07122B]"
+          ? "bg-navy text-white"
+          : "text-gray-600 hover:bg-gray-100 hover:text-navy"
       } ${disabled ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
     >
       {children}
@@ -93,7 +93,7 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
   const charCount = editor.storage.characterCount?.characters() ?? 0;
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#07122B]">
+    <div className="border border-gray-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-navy">
       {/* Toolbar */}
       <div className="flex flex-wrap gap-1 p-2 border-b border-gray-100 bg-gray-50">
         {/* Text styles */}
